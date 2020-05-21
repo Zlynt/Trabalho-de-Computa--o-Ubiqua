@@ -1,0 +1,34 @@
+{
+    "name": "ACC",
+    "version": "0.0.1",
+    "description": "Autenticação via Chave Criptográfica",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab", "tabs", "<all_urls>", "storage", "file:///*/"
+    ],
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_title": "DesignReview",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "file:///C:/Users/teixe/Desktop/CU/Projeto/Pagina/demo.html"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
