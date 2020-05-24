@@ -975,7 +975,7 @@ var CryptoJS = CryptoJS || (function (Math, undefined) {
  */
 
 const injectButton = () => {
-  document.body.innerHTML = document.body.innerHTML.replace("[NCAS LOGIN]", "<button id=\"ncas_login_btn\">Login via NCAS</button>");
+  document.body.innerHTML = document.body.innerHTML.replace("[NCAS LOGIN]", "<button id=\"ncas_login_btn\">Login via ACC</button>");
   document.getElementById("ncas_login_btn").addEventListener("click", function(){
     chrome.runtime.sendMessage("ncas_login", (response) => {
         if(response === null)
@@ -990,7 +990,7 @@ const injectButton = () => {
             if(response_json.status === "true"){
                 window.location.replace(response_json.nextURL);
             }else
-                alert('This account has been banned.');
+                alert('The login is not valid. Please generate a new one');
             console.log(response_json.status);
           }
         };

@@ -1,13 +1,28 @@
+body{
+    background-color: #035E7B;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #FBFEF9;
+    text-align: center;
+    margin: none;
+    padding: none;
+}
+
+#titulo{
+    font-size: 16px;
+}
+
 #container {
  display: flex;
  flex-direction: column;
- width: 150px;
+ width: 200px;
+ margin: none;
+
 }
 
 .ncas_button {
     width: 100%;
-    background-color: #ff0000;
-    color: #FFFFFF;
+    background-color: #AAAAAA;
+    color: #FBFEF9;
     border: none;
     font-size: 14px;
     border-radius: 5px;
